@@ -1,29 +1,26 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
-    <script src="lib/anime.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
 </head>
 
 <body>
-    <div></div>
-
     <script type="text/javascript">
-        anime({
-            targets: 'div',
-            translateX: [{
-                value: 100,
-                duration: 1200
-            }, {
-                value: 0,
-                duration: 800
-            }],
-            rotate: '1turn',
-            backgroundColor: '#FFF',
-            duration: 2000,
-            loop: true
-        });
     </script>
+
+    <div id="toolbar">text</div>
+    <div id="content">
+        <div id="hi"></div>
+        <div id="aboutme" class="hideme"></div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="lib/anime.min.js"></script>
+    <script src="scripts/scrollAnimation.js"></script>
 </body>
 
 </html>
