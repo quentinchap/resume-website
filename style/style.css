@@ -4,32 +4,3 @@ body {
     padding: 0;
     height: 100%;
 }
-
-#content {
-    padding-top: 60px;
-    height: 5000px;
-}
-
-#toolbar {
-    width: 100%;
-    height: 60px;
-    background: black;
-    position: fixed;
-    top: -60px;
-}
-
-#hi {
-    background: green;
-    min-height: 2000px;
-    width: 100%;
-}
-
-#aboutme {
-    background: red;
-    min-height: 400px;
-    width: 100%;
-}
-
-.hideme {
-    opacity: 0;
-}

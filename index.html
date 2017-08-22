@@ -1,26 +1,76 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <title>websitev2</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/home.css">
+    <link rel="stylesheet" type="text/css" href="style/fr.css">
+
 
 </head>
 
 <body>
-    <script type="text/javascript">
-    </script>
+    <video poster="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.jpg?alt=media&token=7a4356f3-0ab8-4275-b6b3-1b62f3990c10" id="bgvid" playsinline autoplay muted>
+    <source src="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.webm?alt=media&token=8ed4cf65-6c2c-4cae-b2b2-a755982d3ca0" type="video/webm">
+    <source src="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.mp4?alt=media&token=c9a6be7d-8a8c-4883-8494-8f2a53abfbff" type="video/mp4">
+    </video>
 
-    <div id="toolbar">text</div>
-    <div id="content">
-        <div id="hi"></div>
-        <div id="aboutme" class="hideme"></div>
+
+    <div id="accueil">
+        <h1 v-on:click="goToHome">Quentin CHAPELLE</h1>
+        <div id="lang-container">
+            <div id="open_fr_website" class="fr_description" onclick="window.location.href = '#frPage';">
+                <img src="./assets/img/france.png">
+                <p>Bienvenue,
+                    <br> Vous souhaitez en savoir plus sur mes expériences profesionnelles, projets et compétences?
+                    <br> </p>
+                <a class="enter" href="https://quentinchapelle.fr">Entrez</a>
+
+            </div>
+
+            <div class="uk_description" v-on:click="openEnglishSite">
+                <img src="./assets/img/uk.png">
+                <br>
+                <p>Welcome,
+                    <br> do you want know more about my professional experiences, projects and about my skills?
+                    <br> </p>
+                <a class="enter" href="#">Entrer</a>
+
+            </div>
+        </div>
+
     </div>
 
+    <div id="frPage" class="panel">
+
+        <div id="toolbar">
+            <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
+            <div class="titleSite"></div>
+            <img src="./assets/img/menu.png" class="menuButton" />
+        </div>
+        <div id="sticky-toolbar">
+            <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
+            <h1 class="titleSite">CHAPELLE Quentin</h1>
+            <img src="./assets/img/menu.png" class="menuButton" />
+        </div>
+        <div id="content">
+            <div id="hi">
+                <h2>Bonjour,<br> Je m'apelle<br> <span class="name">Quentin CHAPELLE</span></h2>
+            </div>
+            <div id="aboutme" class="hideme"></div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="lib/anime.min.js"></script>
     <script src="scripts/scrollAnimation.js"></script>
+    <script src="scripts/videoBg.js"></script>
 </body>
 
 </html>

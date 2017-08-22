@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'rosemary';
+    /*a name to be used later*/
+    src: url('../assets/font/Rosemary-Regular.ttf');
+    /*URL to font*/
+}
+
+.uk_description,
+.fr_description {
+    text-align: center;
+    flex: 1;
+    padding: 10px 10px 3rem 10px;
+    margin-left: auto;
+    position: relative;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+
+.uk_description .enter,
+.fr_description .enter {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 65%;
+    margin-bottom: 10px;
+}
+
+.uk_description:hover,
+.fr_description:hover {
+    transform: translate(1px, -1px);
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: 0 2px 12px 4px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+
+/**
+* Confi anim menu
+*/
+
+#accueil,
+#lang-container,
+h1 {
+    transition-property: all;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in;
+}
+
+#accueil.transform {
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 60px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+#accueil.transform h1 {
+    font-size: 1.5rem;
+    line-height: 60px;
+}
+
+#lang-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#accueil {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5%;
+    width: 50%;
+    min-width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: 1.2rem;
+}
+
+#accueil button {
+    display: block;
+    width: 80%;
+    padding: .4rem;
+    border: none;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.23);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background;
+}
+
+#accueil button:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    letter-spacing: .3rem;
+}
+
+a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
+    transition: .6s background;
+}
+
+a:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../assets/img/back.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+.stopfade {
+    opacity: .8;
+}
+
+body {
+    margin: 0;
+    background: #000;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background: url('../assets/img/back.jpg') #000 center center fixed;
+        background-size: cover;
+    }
+    #accueil {
+        width: 100%;
+        left: 0;
+        padding: 0;
+        height: 550px;
+    }
+    .uk_description,
+    .fr_description,
+    h1 {
+        margin-top: 10px;
+    }
+    .transform h1 {
+        margin: 0;
+    }
+    #lang-container {
+        flex-direction: column;
+    }
+    #bgvid {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #accueil {
+        height: 620px;
+    }
+}

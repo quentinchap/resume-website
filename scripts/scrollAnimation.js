@@ -1,31 +1,38 @@
-$(document).ready(function() {
+/* Every time the window is scrolled ... */
+$('#frPage').scroll(function() {
 
-    /* Every time the window is scrolled ... */
-    $(window).scroll(function() {
+    var newPos = $('#frPage').scrollTop() - 62;
 
-        if ($(window).scrollTop() < 60)
-            $('#toolbar').css({ "top": $(window).scrollTop() - 60 + "px" });
-        else if ($(window).scrollTop() >= 60)
-            $('#toolbar').css({ "top": "0px" });
+    if (newPos >= 0) {
+        $('#sticky-toolbar').css({ "top": "0px" });
+    } else {
 
+        $('#sticky-toolbar').css({ "top": newPos + "px" });
+    }
 
-
-        $('.hideme').each(function(i) {
-
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if (bottom_of_window > bottom_of_object) {
-
-                $(this).animate({
-                    'opacity': '1'
-                }, 1000);
-
-            }
-
-        });
-
-    });
+    manageHiddenElem(1000);
 
 });
+
+
+manageHiddenElem(0);
+
+
+function manageHiddenElem(duration) {
+    console.log("manageHiddenElem");
+    $('.hideme').each(function(i) {
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 3;
+        var bottom_of_window = $('#frPage').scrollTop() + $('#frPage').height();
+
+        /* If the object is completely visible in the window, fade it it */
+        if (bottom_of_window > bottom_of_object) {
+
+            $(this).animate({
+                'opacity': '1'
+            }, duration);
+
+        }
+
+    });
+}
