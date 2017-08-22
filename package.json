@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/quentinchap/resume-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/quentinchap/resume-website/issues"
+  },
+  "homepage": "https://gitlab.com/quentinchap/resume-website#README",
+  "dependencies": {
+    "animejs": "^2.0.2"
+  }
+}
