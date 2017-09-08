@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/home.css">
     <link rel="stylesheet" type="text/css" href="style/fr.css">
+    <link rel="stylesheet" type="text/css" href="style/sideNav.css">
 
 
 </head>
@@ -30,7 +31,7 @@
                 <p>Bienvenue,
                     <br> Vous souhaitez en savoir plus sur mes expériences profesionnelles, projets et compétences?
                     <br> </p>
-                <a class="enter" href="https://quentinchapelle.fr">Entrez</a>
+                <a class="enter" href="#frPage">Entrez</a>
 
             </div>
 
@@ -49,21 +50,38 @@
 
     <div id="frPage" class="panel">
 
+        <div id="frSideNav">
+            <div class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav('frSideNav')">&times;</a>
+                <a href="javascript:void(0)" onclick="clickOnMenu('frSideNav','frPage','aboutme')">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
         <div id="toolbar">
             <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
             <div class="titleSite"></div>
-            <img src="./assets/img/menu.png" class="menuButton" />
+            <img src="./assets/img/menu.png" class="menuButton" onclick="openNav('frSideNav')" />
         </div>
         <div id="sticky-toolbar">
             <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
             <h1 class="titleSite">CHAPELLE Quentin</h1>
-            <img src="./assets/img/menu.png" class="menuButton" />
+            <img src="./assets/img/menu.png" class="menuButton" onclick="openNav('frSideNav')" />
         </div>
         <div id="content">
             <div id="hi">
                 <h2>Bonjour,<br> Je m'apelle<br> <span class="name">Quentin CHAPELLE</span></h2>
             </div>
-            <div id="aboutme" class="hideme"></div>
+            <div id="aboutme" class="hideme">
+                <h1> A propos de moi </h1>
+                <p> Je suis cadre en informatique dans une multinationale basé en Auvergne.</p>
+                <p> Mes missions passées et actuelles vont de la conception de solutions digitales en passant par leurs développement et leurs exploitation. Mon profil multicompétent et transverse me permet d'être flexible et de mieux anticiper les problèmes.</p>
+                <p> L'informatique est pour moi aussi bien un métier qu'une passion. J'aime découvrir de nouvelles technologies et d'en tirer le meilleur afin d'apporter toujours plus de valeur. Tout en apportant un soin particulier à l'expériences et à la
+                    satisfaction des utilisateurs.
+                </p>
+            </div>
         </div>
     </div>
 
@@ -71,6 +89,7 @@
     <script src="lib/anime.min.js"></script>
     <script src="scripts/scrollAnimation.js"></script>
     <script src="scripts/videoBg.js"></script>
+    <script src="scripts/sideNavMenu.js"></script>
 </body>
 
 </html>

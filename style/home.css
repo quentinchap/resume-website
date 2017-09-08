@@ -108,11 +108,14 @@ h1 {
     letter-spacing: .3rem;
 }
 
+a.enter {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 a {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.5);
     padding: .5rem;
     transition: .6s background;
 }

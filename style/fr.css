@@ -102,9 +102,11 @@
 }
 
 #aboutme {
-    background: red;
+    background: #efefef;
     min-height: 400px;
-    width: 100%;
+    padding: 5%;
+    width: 90%;
+    background-image: url(../assets/img/aboutme.jpeg);
 }
 
 .hideme {
