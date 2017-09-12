@@ -2,6 +2,10 @@
 $('#frPage').scroll(function() {
 
     var newPos = $('#frPage').scrollTop() - 62;
+    $('#hi').parlx({
+        speed: 0.4,
+        positionX: "right"
+    });
 
     if (newPos >= 0) {
         $('#sticky-toolbar').css({ "top": "0px" });
@@ -13,7 +17,6 @@ $('#frPage').scroll(function() {
     manageHiddenElem(1000);
 
 });
-
 
 manageHiddenElem(0);
 
@@ -36,3 +39,17 @@ function manageHiddenElem(duration) {
 
     });
 }
+
+$(".more-info-button").click(function() {
+
+    $button = $(this);
+    $content = $button.next();
+    $content.slideToggle(500, function() {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $button.text(function() {
+            //change text based on condition
+            return $content.is(":visible") ? " - " : "En savoir plus";
+        });
+    });
+});

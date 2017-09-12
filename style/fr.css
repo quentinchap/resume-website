@@ -1,70 +1,56 @@
-.panel {
-    min-width: 100%;
-    height: 98%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin-top: -200%;
-    position: absolute;
-    background: #000;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.6);
-    z-index: 2;
-    -webkit-transition: all .8s ease-in-out;
-    -moz-transition: all .8s ease-in-out;
-    -o-transition: all .8s ease-in-out;
-    transition: all .8s ease-in-out;
-}
-
-.panel:target {
-    margin-top: 0%;
-    background-color: #ffcb00;
-}
-
 #frPage {
-    background: white url(../assets/img/profil2.jpg) no-repeat;
+    /**/
     background-size: 100% auto;
     background-position-y: top center;
+    min-width: 350px;
     /*background-size: 1000px;
     background-position-x: -490px;*/
-}
-
-@media screen and (max-width: 700px) {
-    #frPage {
-        background-size: auto 460px;
-        background-position-y: top center;
-    }
 }
 
 #content {
     height: 5000px;
 }
 
+
+/** =============== Toolbar =============== */
+
 #toolbar,
 #sticky-toolbar {
+    min-width: 350px;
     display: flex;
     width: calc(100% - 10px);
     height: 60px;
     padding-left: 10px;
     position: absolute;
+    z-index: 11;
     top: 0px;
 }
 
 #sticky-toolbar {
     background: white;
     position: fixed;
+    color: #3e3e3e;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     top: -62px;
+    z-index: 12;
 }
 
 #toolbar .titleSite {
     color: transparent;
 }
 
+.profession {
+    color: rgba(148, 147, 147, 0.82);
+    font-weight: 300;
+}
+
 .titleSite {
     flex: 1;
-    font-family: 'rosemary';
-    font-size: 20px;
-    line-height: 60px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
     text-align: left;
+    padding-top: 10px;
     padding-left: 20px;
     margin: 0;
 }
@@ -82,14 +68,20 @@
     padding: 20px
 }
 
+
+/** Intro */
+
 #hi {
+    background: white url(../assets/img/profil2.jpg) no-repeat;
+    background-size: cover;
     min-height: 400px;
-    width: 100%;
+    height: 600px!important;
+    width: 100vw;
     padding-top: 60px;
 }
 
 #hi h2 {
-    font-family: 'rosemary';
+    font-family: 'Assistant', sans-serif;
     margin: 100px 0 0 20px;
     color: rgba(148, 147, 147, 0.82);
     font-weight: 100;
@@ -98,22 +90,31 @@
 #hi h2 .name {
     font-size: 1.2em;
     font-weight: 400;
-    color: black;
+    color: #3e3e3e;
 }
+
+
+/** About Me */
 
 #aboutme {
     background: #efefef;
     min-height: 400px;
     padding: 5%;
     width: 90%;
-    background-image: url(../assets/img/aboutme.jpeg);
 }
 
-.hideme {
-    opacity: 0;
+@media screen and (max-width: 900px) {
+    #hi h2 {
+        margin: 150px 0 0 20px;
+    }
 }
 
-.panel {
-    min-width: 100%;
-    min-height: 100%;
+@media screen and (max-width: 700px) {
+    #frPage {
+        background-size: auto 460px;
+        background-position-y: top center;
+    }
+    #hi {
+        background-position: -100px!important;
+    }
 }

@@ -6,6 +6,7 @@
     <title>websitev2</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -53,40 +54,205 @@
         <div id="frSideNav">
             <div class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav('frSideNav')">&times;</a>
-                <a href="javascript:void(0)" onclick="clickOnMenu('frSideNav','frPage','aboutme')">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
+                <a href="javascript:void(0)" onclick="clickOnMenu('frSideNav','frPage','aboutme')">A propos de moi</a>
+                <!--   <a href="#">Compétences</a>
+                <a href="#">Education</a>
+                <a href="#">Expériences</a> -->
+                <a href="#">Portfolio</a>
+                <a href="#">Articles</a>
                 <a href="#">Contact</a>
             </div>
         </div>
 
-        <div id="toolbar">
-            <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
-            <div class="titleSite"></div>
-            <img src="./assets/img/menu.png" class="menuButton" onclick="openNav('frSideNav')" />
-        </div>
+
         <div id="sticky-toolbar">
             <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
-            <h1 class="titleSite">CHAPELLE Quentin</h1>
+            <p class="titleSite">Quentin <strong>CHAPELLE</strong><br> <span class="profession">Analyste développeur fullstack</span></p>
             <img src="./assets/img/menu.png" class="menuButton" onclick="openNav('frSideNav')" />
         </div>
         <div id="content">
-            <div id="hi">
-                <h2>Bonjour,<br> Je m'apelle<br> <span class="name">Quentin CHAPELLE</span></h2>
+            <div id="toolbar">
+                <img src="./assets/img/photoProfil.jpg" class="photoProfil" />
+                <div class="titleSite"></div>
+                <img src="./assets/img/menu.png" class="menuButton" onclick="openNav('frSideNav')" />
             </div>
+            <section class="parallax">
+                <div id="hi">
+                    <h2>Bonjour,<br> Je m'apelle<br> <span class="name">Quentin CHAPELLE</span></h2>
+                </div>
+            </section>
             <div id="aboutme" class="hideme">
                 <h1> A propos de moi </h1>
+                <h2>Qui suis-je ?</h2>
                 <p> Je suis cadre en informatique dans une multinationale basé en Auvergne.</p>
                 <p> Mes missions passées et actuelles vont de la conception de solutions digitales en passant par leurs développement et leurs exploitation. Mon profil multicompétent et transverse me permet d'être flexible et de mieux anticiper les problèmes.</p>
                 <p> L'informatique est pour moi aussi bien un métier qu'une passion. J'aime découvrir de nouvelles technologies et d'en tirer le meilleur afin d'apporter toujours plus de valeur. Tout en apportant un soin particulier à l'expériences et à la
                     satisfaction des utilisateurs.
                 </p>
+
+
+                <h2>Mes compétences</h2>
+
+
+
+                <div class="card">
+                    <h2>Mes expériences professionnelles</h2>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2016 - maintenant</p>
+                            <p><strong>MICHELIN</strong></p>
+                            <p> Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Analyste développeur fullstack</h3>
+                            <p>Analyse de besoins, conception et développement de solutions web et mobile innovantes.</p>
+                            <div class="more-info-button">En savoir plus</div>
+                            <div class="more-info-content">
+                                Principaux challenges
+                                <ul>
+                                    <li>
+                                        Time to market très court
+                                    </li>
+                                    <li>Multiplication des technologies utilisées</li>
+                                    <li>S'adapter aux différents métiers</li>
+                                    <li>Montée en compétence en UX/Design Technologies</li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2016 </p>
+                            <p><strong>UNIVERSITÉ BLAISE PASCAL</strong></p>
+                            <p> Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Chargé d'enseignement vacataire</h3>
+                            <p>Encadrement de Travaux pratiques en C / Système (niveau Bac +3) et en Structure de données (niveau Bac +2)</p>
+                            <div class="more-info-button">En savoir plus</div>
+                            <div class="more-info-content">
+                                Principaux challenges
+                                <ul>
+                                    <li>Premiére expérience dans l'enseignement</li>
+                                    <li>Intéresser et motiver sur un créneau horaire difficile</li>
+                                    <li>Vulgariser au maximum</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2014 - 2016</p>
+                            <p><strong>MICHELIN</strong></p>
+                            <p> Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Analyste fonctionnel</h3>
+                            <p>Conception et amélioration d'outils gravitant autour de la prise de commande.</p>
+                        </div>
+                    </div>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2013 - 2014</p>
+                            <p><strong>MICHELIN</strong></p>
+                            <p> Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Alternant</h3>
+                            <p>Etude et mise en place d’outils de monitoring et de troubleshooting</p>
+                            <div class="more-info-button">En savoir plus</div>
+                            <div class="more-info-content">
+                                Principaux challenges
+                                <ul>
+                                    <li>
+                                        Time to market très court
+                                    </li>
+                                    <li>Multiplication des technologies utilisées</li>
+                                    <li>S'adapter aux différents métiers</li>
+                                    <li>Montée en compétence en UX/Design Technologies</li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2013</p>
+                            <p><strong>WORLDLINE</strong></p>
+                            <p>Lyon</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Développeur stagiaire</h3>
+                            <p>Conception, développement, maintenance et déploiement d'applications Web JEE. Stage effectué dans le cadre du programme pédagogique de deuxième année de l'ISIMA.</p>
+                            <div class="more-info-button">En savoir plus</div>
+                            <div class="more-info-content">
+                                Principaux challenges
+                                <ul>
+                                    <li>Contact clients</li>
+                                    <li>Prise en main des outils et des méthodes d'intégration continue et de gestion de projet</li>
+                                    <li>Formation technique</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2010</p>
+                            <p><strong>CHU</strong></p>
+                            <p>Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Développeur stagiaire</h3>
+                            <p>Conception et développement d’un logiciel de paramétrage et d’automatisation d’un laser médicale.</p>
+                            <div class="more-info-button">En savoir plus</div>
+                            <div class="more-info-content">
+                                Principaux challenges
+                                <ul>
+                                    <li>Premier projet en totale autonomie</li>
+                                    <li>Protocole de communication avec l'appareil</li>
+                                    <li>Rigueur protocolaire imposée par les contraintes métier</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p><strong>DIVERS</strong></p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Emplois saisonniers</h3>
+                            <p>Emplois vacances ayant eu lieu avant 2013</p>
+                            <div class="more-info-button">En savoir plus</div>
+                            <div class="more-info-content">
+                                <ul>
+                                    <li>Ambulancier à Tissier - Nevers 58000 : Août 2011 et Juillet - Août 2012</li>
+                                    <li>Service Comptabilité à Logivie - Nevers 58000 : Août 2010</li>
+                                    <li>Chargé d'accueil à la Caisse d'épargne - Coulanges-lés-Nevers 58660 : Juillet 2009</li>
+                                    <li>Service informatique à Logivie - Nevers 58000 : Août 2008 et Août 2009</li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Mes formations</h2>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="lib/anime.min.js"></script>
+    <script src="lib/parlx.min.js"></script>
     <script src="scripts/scrollAnimation.js"></script>
     <script src="scripts/videoBg.js"></script>
     <script src="scripts/sideNavMenu.js"></script>
