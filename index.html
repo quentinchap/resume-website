@@ -83,20 +83,43 @@
             </section>
             <div id="aboutme" class="hideme">
                 <h1> A propos de moi </h1>
-                <h2>Qui suis-je ?</h2>
-                <p> Je suis cadre en informatique dans une multinationale basé en Auvergne.</p>
-                <p> Mes missions passées et actuelles vont de la conception de solutions digitales en passant par leurs développement et leurs exploitation. Mon profil multicompétent et transverse me permet d'être flexible et de mieux anticiper les problèmes.</p>
-                <p> L'informatique est pour moi aussi bien un métier qu'une passion. J'aime découvrir de nouvelles technologies et d'en tirer le meilleur afin d'apporter toujours plus de valeur. Tout en apportant un soin particulier à l'expériences et à la
-                    satisfaction des utilisateurs.
-                </p>
+                <div class="first-section">
+                    <div id="whoiam">
+                        <h2 class="title-section">Qui suis-je ?</h2>
+                        <p> Je suis cadre en informatique dans une multinationale basé en Auvergne.</p>
+                        <p> Mes missions passées et actuelles vont de la conception de solutions digitales en passant par leurs développement et leurs exploitation. Mon profil multicompétent et transverse me permet d'être flexible et de mieux anticiper les
+                            problèmes.
+                        </p>
+                        <p> L'informatique est pour moi aussi bien un métier qu'une passion. J'aime découvrir de nouvelles technologies et d'en tirer le meilleur afin d'apporter toujours plus de valeur. Tout en apportant un soin particulier à l'expériences
+                            et à la satisfaction des utilisateurs.
+                        </p>
+                    </div>
 
 
-                <h2>Mes compétences</h2>
+                    <div id="competency">
+                        <h2 class="title-section">Compétences</h2>
+                        <div class="bar">
+                            <p>Développement web</p>
+                            <div class="progress-wrap progress" data-progress-percent="70">
+                                <div class="progress-bar progress"></div>
+                                <div class="pourcent"></div>
+                            </div>
+                        </div>
 
+
+                        <div class="bar">
+                            <p>Méthodes agiles</p>
+                            <div class="progress-wrap progress" data-progress-percent="70">
+                                <div class="progress-bar progress"></div>
+                                <div class="pourcent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div class="card">
-                    <h2>Mes expériences professionnelles</h2>
+                    <h2 class="title-section">Expériences professionnelles</h2>
                     <div class="card-ex-content">
                         <div class="year-ex">
                             <p>2016 - maintenant</p>
@@ -244,7 +267,44 @@
                 </div>
 
                 <div class="card">
-                    <h2>Mes formations</h2>
+                    <h2 class="title-section">Formation</h2>
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2011 - 2014</p>
+                            <p><strong>ISIMA</strong></p>
+                            <p>Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>Ecole d'ingénieur</h3>
+                            <p>L’ISIMA (Institut Supérieur d’Informatique, de Modélisation et de leurs Applications) est une école d’Ingénieurs axée sur les métiers de l’Informatique et de ses applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2010 - 2011</p>
+                            <p><strong>LYCEE LAFAYETTE</strong></p>
+                            <p>Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>CPGE ATS</h3>
+                            <p>Classe préparatoire aux grandes écoles. Formation sur un ans réservée au détenteur d'un DUT ou d'un BTS.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-ex-content">
+                        <div class="year-ex">
+                            <p>2008 - 2011</p>
+                            <p><strong>UNIVERSITÉ D'AUVERGNE</strong></p>
+                            <p>Clermont-Ferrand</p>
+                        </div>
+                        <div class="description-ex">
+                            <h3>DUT informatique</h3>
+                            <p>Formation post-bac essentiellement axé sur les métiers de la conception et du développement de solutions informatique. </p>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -253,6 +313,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="lib/anime.min.js"></script>
     <script src="lib/parlx.min.js"></script>
+    <script src="scripts/progressbar.js"></script>
     <script src="scripts/scrollAnimation.js"></script>
     <script src="scripts/videoBg.js"></script>
     <script src="scripts/sideNavMenu.js"></script>

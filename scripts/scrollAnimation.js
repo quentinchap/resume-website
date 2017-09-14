@@ -1,6 +1,7 @@
 /* Every time the window is scrolled ... */
 $('#frPage').scroll(function() {
 
+
     var newPos = $('#frPage').scrollTop() - 62;
     $('#hi').parlx({
         speed: 0.4,

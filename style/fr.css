@@ -11,6 +11,24 @@
     height: 5000px;
 }
 
+@media screen and (min-width: 1000px) {
+    #whoiam,
+    #competency {
+        width: 50%;
+        flex: 1;
+        margin-bottom: 20px;
+    }
+    #whoiam {
+        padding-right: 15px;
+    }
+    #competency {
+        padding-left: 15px;
+    }
+    .first-section {
+        display: flex;
+    }
+}
+
 
 /** =============== Toolbar =============== */
 
