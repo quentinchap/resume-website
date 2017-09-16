@@ -1,0 +1,62 @@
+<div id="frPage" class="panel">
+
+    <div id="frSideNav">
+        <div class="sidenav">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <a href="javascript:void(0)" class="menu-item" data-lang="fr" data-section="aboutme">A propos de moi</a>
+            <!--   <a href="#">Compétences</a>
+                    <a href="#">Education</a>
+                    <a href="#">Expériences</a> -->
+            <a href="#">Dernier projet</a>
+            <a href="#">Articles</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+
+    <div id="sticky-toolbar">
+        <img src="${require('../assets/img/photoProfil.jpg')}" class="photoProfil" />
+        <p class="titleSite">Quentin <strong>CHAPELLE</strong><br> <span class="profession">Analyste développeur fullstack</span></p>
+        <img src="${require('../assets/img/menu.png')}" class="menu-button-fr" />
+    </div>
+    <div id="content">
+        <div id="toolbar">
+            <img src="${require('../assets/img/photoProfil.jpg')}" class="photoProfil" />
+            <div class="titleSite"></div>
+            <img src="${require('../assets/img/menu.png')}" class="menu-button-fr" />
+        </div>
+        <section class="parallax hi-parallax">
+            <div id="hi">
+                <h2>Bonjour,<br> Je m'apelle<br> <span class="name">Quentin CHAPELLE</span></h2>
+            </div>
+        </section>
+        <section id="aboutme" class="hideme">
+            <h1> A propos de moi </h1>
+            <div class="first-section">
+
+                <!-- Qui suis-je -->
+                ${require('./whoiam.html')}
+
+                <!-- Compétences -->
+                ${require('./competencies.html')}
+
+
+            </div>
+
+            <!-- Compétences pro -->
+            ${require('./pro.html')}
+
+            <!-- Formation -->
+            ${require('./formation.html')}
+            <div>
+                Français Langue natale Anglais (TOEIC: 890) Capacité professionnelle complète Espagnole Notions de bases
+            </div>
+
+
+        </section>
+        <section class="parallax work-parallax" class="hideme">
+            <!-- Formation -->
+            ${require('./work.html')}
+        </section>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>websitev2</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+</head>
+
+<body>
+    <video poster="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.jpg?alt=media&token=7a4356f3-0ab8-4275-b6b3-1b62f3990c10" id="bgvid" playsinline autoplay muted>
+    <source src="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.webm?alt=media&token=8ed4cf65-6c2c-4cae-b2b2-a755982d3ca0" type="video/webm">
+    <source src="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.mp4?alt=media&token=c9a6be7d-8a8c-4883-8494-8f2a53abfbff" type="video/mp4">
+    </video>
+
+
+    <div id="accueil">
+        <h1 v-on:click="goToHome">Quentin CHAPELLE</h1>
+
+        <div id="lang-container">
+            <div id="open_fr_website" class="fr_description" onclick="window.location.href = '#frPage';">
+                <img src="./assets/img/france.png">
+                <p>Bienvenue,
+                    <br> Vous souhaitez en savoir plus sur mes expériences profesionnelles, projets et compétences?
+                    <br> </p>
+                <a class="enter" href="#frPage">Entrez</a>
+
+            </div>
+
+            <div class="uk_description" v-on:click="openEnglishSite">
+                <img src="./assets/img/uk.png">
+                <br>
+                <p>Welcome,
+                    <br> do you want know more about my professional experiences, projects and about my skills?
+                    <br> </p>
+                <a class="enter" href="#">Entrer</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    ${require('./fr-version/frpage.html')}
+
+</body>
+
+</html>
