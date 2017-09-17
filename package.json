@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "build": "webpack",
+        "build": "rm -r build/* && webpack",
         "build-prod": "webpack -p",
         "watch": "webpack --watch",
         "serve": "webpack --watch & webpack-dev-server  --inline --hot --content-base ./build"
@@ -19,6 +19,7 @@
     },
     "homepage": "https://gitlab.com/quentinchap/resume-website#README",
     "dependencies": {
+        "animate.css": "^3.5.2",
         "animejs": "^2.0.2",
         "extract-text-webpack-plugin": "github:webpack-contrib/extract-text-webpack-plugin",
         "jquery": "^3.2.1"

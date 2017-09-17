@@ -9,8 +9,6 @@ $('.closebtn').click(function() {
 });
 
 $('.menu-item').click(function() {
-
-    console.log('test', $(this), $(this).data('lang'));
     clickOnMenu($(this).data('lang'), $(this).data('section'))
 
 });
@@ -28,10 +26,14 @@ function closeNav(id) {
 
 function clickOnMenu(lang, section) {
 
-    $('#' + lang + "Page").animate({
-            scrollTop: ($('#' + section).offset().top - 65)
-        },
-        600);
+    console.log(lang, section, $('#' + section));
+
+
+
+    let lastElementTop = $('#' + section).position().top;
+    let scrollAmount = lastElementTop - 60;
+
+    $('html,body').animate({ scrollTop: scrollAmount }, 1000);
 
     closeNav(lang + "SideNav");
 

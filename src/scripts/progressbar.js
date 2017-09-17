@@ -3,16 +3,11 @@ $(window).resize(function() {
 });
 
 $(window).ready(function() {
-    if (window.location.hash == "#frPage") {
-        moveProgressBar();
-    }
+    moveProgressBar();
 });
 
-$(window).on('hashchange', function() {
-    if (window.location.hash == "#frPage") {
-        moveProgressBar();
-    }
-});
+
+
 
 function moveProgressBar() {
 

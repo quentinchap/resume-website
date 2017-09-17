@@ -1,10 +1,10 @@
 let blocked = false;
 
 
-$('#frPage').scroll(function() {
+$(window).scroll(function() {
 
 
-    var newPos = $('#frPage').scrollTop() - 62;
+    var newPos = $(window).scrollTop() - 62;
     $('#hi').parlx({
         speed: 0.4,
         positionX: "right"
@@ -12,8 +12,12 @@ $('#frPage').scroll(function() {
     $('#work-bg').parlx({
         speed: 0.4,
         positionX: "center",
-        positionY: "bottom",
-        naturalHeight: "600px"
+        positionY: "bottom"
+    });
+    $('#contact-bg').parlx({
+        speed: 0.4,
+        positionX: "center",
+        positionY: "bottom"
     });
 
     if (newPos >= 0) {
@@ -30,21 +34,33 @@ $('#frPage').scroll(function() {
 manageHiddenElem(0);
 
 function manageHiddenElem(duration) {
-    $('.hideme').each(function(i) {
+    /* $('.hideme').each(function(i) {
 
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 3;
-        var bottom_of_window = $('#frPage').scrollTop() + $('#frPage').height();
+         var bottom_of_object = $(this).offset().top;
+         var bottom_of_window = $('#frPage').scrollTop();
 
-        /* If the object is completely visible in the window, fade it it */
-        if (bottom_of_window > bottom_of_object) {
+         console.log($(this), bottom_of_window > bottom_of_object);
 
-            $(this).animate({
-                'opacity': '1'
-            }, duration);
+         /* If the object is completely visible in the window, fade it it 
+         if (bottom_of_window > bottom_of_object) {
 
-        }
+             $(this).animate({
+                 'opacity': '1'
+             }, duration);
 
+         }
+
+     });
+    $('#aboutme').addClass("hidden").viewportChecker({
+        classToAdd: 'visible animated zoomIn',
+        offset: 100
     });
+
+    $('#articles').addClass("hidden").viewportChecker({
+        classToAdd: 'visible animated zoomIn',
+        offset: 500
+    });*/
+
 }
 
 $(".more-info-button-fr").click(function() {

@@ -1,177 +1,572 @@
-    #frPage {
-        /**/
-        background-size: 100% auto;
-        background-position-y: top center;
-        min-width: 350px;
-        /*background-size: 1000px;
-    background-position-x: -490px;*/
+/** =============== Toolbar =============== */
+
+#toolbar,
+#sticky-toolbar {
+    min-width: 350px;
+    display: flex;
+    width: calc(100% - 10px);
+    height: 60px;
+    padding-left: 10px;
+    position: absolute;
+    z-index: 11;
+    top: 0px;
+}
+
+#sticky-toolbar {
+    background: white;
+    position: fixed;
+    color: #3e3e3e;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    top: -62px;
+    z-index: 12;
+}
+
+#toolbar .titleSite {
+    color: transparent;
+}
+
+.profession {
+    color: rgba(148, 147, 147, 0.82);
+    font-weight: 300;
+}
+
+.titleSite {
+    flex: 1;
+    font-family: 'Assistant', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.photoProfil {
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    float: left;
+}
+
+.menu-button-fr {
+    width: 20px;
+    height: 20px;
+    padding: 20px
+}
+
+
+/** portfolio */
+
+#work-bg {
+    background: white url(../assets/img/work.jpeg) no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    height: 800px!important;
+    width: 100vw;
+    padding-top: 60px;
+}
+
+#work-content {
+    position: absolute;
+    top: 0;
+    color: white;
+    padding: 5%;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.69);
+}
+
+.ex-list {
+    width: 100%;
+    height: 320px;
+    display: flex;
+}
+
+.ex-item {
+    flex: 1;
+    margin: 10px;
+    background: #3c3c3c;
+    text-align: center;
+    padding: 20px;
+}
+
+.ex-item p {
+    text-align: justify;
+    padding: 5px;
+}
+
+.ex-item a,
+.ex-item a:hover {
+    padding: 0;
+    color: #9fb9c3;
+}
+
+.ex-item .logo {
+    height: 40px;
+}
+
+
+/** Articles */
+
+#list-article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-header {
+    height: 150px;
+    background-size: cover;
+    border-bottom: 1px solid #dcdbdb;
+}
+
+.card-article {
+    flex: 1;
+    min-width: 29%;
+    max-width: 29%;
+    margin: 10px 2% 10px 2%;
+    background: white;
+    border: 1px solid #e4e4e4;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-content {
+    flex: 1;
+    padding: 5px;
+}
+
+.card-article .date {
+    font-weight: 400;
+    color: rgba(60, 60, 60, 0.48);
+    font-size: 0.8em;
+}
+
+.article-author {
+    text-align: right;
+    width: 100%;
+}
+
+.article-author a,
+.article-author a:hover {
+    padding: 10px;
+    background: none;
+    color: #3c3c3c;
+    font-weight: 600;
+    text-align: right;
+    line-height: 40px;
+    display: block;
+}
+
+.devotics-logo {
+    width: 40px;
+    height: 40px;
+    background: #3c3c3c url(../assets/img/devotics-ex.png);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    float: right;
+    margin-left: 5px;
+}
+
+#more_article_1,
+#more_article_2 {
+    visibility: none;
+}
+
+#more-info,
+#more-info:hover {
+    color: #3c3c3c;
+    background: none;
+    border: 1px solid #3c3c3c;
+    margin-top: 15px;
+}
+
+.cv-download {
+    background: #3c3c3c;
+    float: right;
+    text-transform: uppercase;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+}
+
+.bar p {
+    margin: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.pourcent {
+    width: 26px;
+    color: #efefef;
+    background: #3c3c3c;
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    top: -10px;
+}
+
+.progress-wrap {
+    background: #3c3c3c;
+    margin: 0 0 15px 0;
+    position: relative;
+}
+
+.progress-wrap .progress-bar {
+    background: #ddd;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.panel {
+    min-width: 100%;
+    min-height: 100%;
+    height: 98%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -200%;
+    position: absolute;
+    background: #e4e4e4;
+    box-shadow: 0px 4px 7px #3c3c3c;
+    z-index: 2;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.panel:target {
+    margin-top: 0%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.hideme {
+    opacity: 0;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e4e4e4;
+}
+
+.year-ex p {
+    margin: 0;
+}
+
+.card-article h2,
+.card h3 {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+    font-weight: 100;
+    color: #3c3c3c;
+}
+
+.card-ex-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.year-ex {
+    flex: 0.3;
+}
+
+.title-section {
+    text-transform: uppercase;
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+    font-weight: 400;
+    color: #3c3c3c;
+    margin-bottom: 10px;
+}
+
+.more-info-button-fr,
+.more-info-button-en {
+    height: 15px;
+    width: 100px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.62);
+    border: 1px solid rgba(0, 0, 0, 0.37);
+}
+
+.more-info-content {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.description-ex {
+    position: relative;
+    flex: 0.7;
+}
+
+.description-ex p,
+.more-info-content {
+    /*max-width: calc(100% - 120px);*/
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+
+.more-info-content ul {
+    -webkit-padding-start: 20px;
+}
+
+.parallax {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.hi-parallax {
+    height: 460px;
+}
+
+.work-parallax {
+    height: 550px;
+}
+
+.icon {
+    height: 24px;
+    margin: 5px;
+}
+
+.line {
+    background: rgba(255, 255, 255, 0.30);
+    height: 1px;
+    width: 80%;
+    margin: 10px 10% 10px 10%;
+}
+
+
+/** Intro */
+
+#hi {
+    background: white url(../assets/img/profil2.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 400px;
+    height: 600px!important;
+    width: 100vw;
+    padding-top: 60px;
+}
+
+#hi h2 {
+    font-family: 'Assistant', sans-serif;
+    margin: 100px 0 0 20px;
+    color: rgba(148, 147, 147, 0.82);
+    font-weight: 100;
+}
+
+#hi h2 .name {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #3e3e3e;
+}
+
+
+/** About Me */
+
+#aboutme,
+#articles {
+    background: #efefef;
+    min-height: 400px;
+    padding: 5%;
+    width: 90%;
+    overflow: auto;
+}
+
+
+/** whoiam */
+
+#whoiam {
+    margin-bottom: 70px;
+}
+
+
+/** competency */
+
+#competency {
+    margin-bottom: 50px;
+}
+
+
+/** contact */
+
+#contact-bg {
+    background: white url(../assets/img/work.jpeg) no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    height: 600px!important;
+    width: 100vw;
+    padding-top: 60px;
+}
+
+#contact-content {
+    position: absolute;
+    top: 0;
+    color: white;
+    padding: 5%;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.69);
+}
+
+.contact-parallax {
+    height: 250px;
+}
+
+.social-list {
+    display: flex;
+}
+
+.social {
+    flex: 1;
+    text-align: center;
+}
+
+.social img {
+    float: left;
+    width: 100px;
+}
+
+.social .label {
+    line-height: 100px;
+    display: inline-block;
+    font-size: 1.4em;
+    color: #d2d2d2;
+    margin-left: 10px;
+}
+
+.social a,
+.social a:hover {
+    line-height: 50px;
+    background: none;
+}
+
+@media screen and (max-width: 900px) {
+    #hi h2 {
+        margin: 150px 0 0 20px;
     }
-    
-    @media screen and (min-width: 1000px) {
-        #whoiam,
-        #competency {
-            width: 50%;
-            flex: 1;
-            margin-bottom: 30px;
-        }
-        #whoiam {
-            padding-right: 15px;
-        }
-        #competency {
-            padding-left: 15px;
-        }
-        .first-section {
-            display: flex;
-        }
+}
+
+@media screen and (max-width: 900px) {
+    .ex-list {
+        flex-direction: column;
     }
-    /** =============== Toolbar =============== */
-    
-    #toolbar,
-    #sticky-toolbar {
-        min-width: 350px;
-        display: flex;
-        width: calc(100% - 10px);
-        height: 60px;
-        padding-left: 10px;
-        position: absolute;
-        z-index: 11;
-        top: 0px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .ex-item {
+        height: 150px;
     }
-    
-    #sticky-toolbar {
-        background: white;
-        position: fixed;
-        color: #3e3e3e;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        top: -62px;
-        z-index: 12;
+    .work-parallax {
+        height: 800px;
     }
-    
-    #toolbar .titleSite {
-        color: transparent;
+    #work-bg {
+        height: 1000px!important;
     }
-    
-    .profession {
-        color: rgba(148, 147, 147, 0.82);
-        font-weight: 300;
+}
+
+@media screen and (max-width: 400px) {
+    .work-parallax {
+        height: 1150px;
     }
-    
-    .titleSite {
+    #work-bg {
+        height: 1300px!important;
+    }
+    .ex-item {
+        height: 300px;
+    }
+    .year-ex {
+        flex: 0.4;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    .ex-item {
+        height: 250px;
+    }
+    .work-parallax {
+        height: 950px;
+    }
+    #work-bg {
+        height: 1100px!important;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 880px) {
+    .card-article {
         flex: 1;
-        font-family: 'Assistant', sans-serif;
-        font-size: 15px;
-        line-height: 20px;
-        text-align: left;
-        padding-top: 10px;
-        padding-left: 20px;
-        margin: 0;
-    }
-    
-    .photoProfil {
-        height: 40px;
-        border-radius: 50%;
-        margin: 10px;
+        min-width: 45%;
+        max-width: 45%;
+        margin: 10px 2% 10px 2%;
+        background: white;
+        border: 1px solid #e4e4e4;
         float: left;
     }
-    
-    .menu-button-fr {
-        width: 20px;
-        height: 20px;
-        padding: 20px
+    .work-parallax {
+        height: 1000px;
     }
-    /** portfolio */
-    
-    #work-bg {
-        background: white url(../assets/img/work.jpeg) no-repeat;
-        background-size: cover;
-        min-height: 400px;
-        height: 800px!important;
-        width: 100vw;
-        padding-top: 60px;
+}
+
+@media screen and (max-width: 700px) {
+    #hi {
+        background-position: -100px!important;
     }
-    
-    #work-content {
-        position: absolute;
-        top: 0;
-        color: white;
-        padding: 5%;
-        width: 90%;
-        height: 100%;
-        background-color: rgba(33, 33, 33, 0.69);
+}
+
+@media screen and (max-width: 500px) {
+    .card-article {
+        flex: 1;
+        min-width: 96%;
+        max-width: 96%;
+        margin: 10px 2% 10px 2%;
+        background: white;
+        border: 1px solid #e4e4e4;
+        float: left;
     }
-    
-    .ex-list {
-        width: 100%;
-        height: 300px;
+}
+
+@media screen and (min-width: 1000px) {
+    #whoiam,
+    #competency,
+    .card-pro,
+    .card-for-lang {
+        width: 50%;
+        flex: 1;
+        margin-bottom: 30px;
+    }
+    #whoiam {
+        padding-right: 15px;
+    }
+    .card-for-lang {
+        margin-left: 15px;
+    }
+    #competency,
+    .card-for-lang {
+        padding-left: 15px;
+    }
+    .first-section {
         display: flex;
     }
-    
-    .ex-item {
-        flex: 1;
-        margin: 10px;
-        background: #3c3c3c;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .ex-item p {
-        text-align: justify;
-        padding: 5px;
-    }
-    
-    .ex-item a,
-    .ex-item a:hover {
-        padding: 0;
-        color: #9fb9c3;
-    }
-    
-    .ex-item .logo {
-        height: 40px;
-    }
-    /** Intro */
-    
-    #hi {
-        background: white url(../assets/img/profil2.jpg) no-repeat;
-        background-size: cover;
-        min-height: 400px;
-        height: 600px!important;
-        width: 100vw;
-        padding-top: 60px;
-    }
-    
-    #hi h2 {
-        font-family: 'Assistant', sans-serif;
-        margin: 100px 0 0 20px;
-        color: rgba(148, 147, 147, 0.82);
-        font-weight: 100;
-    }
-    
-    #hi h2 .name {
-        font-size: 1.2em;
-        font-weight: 400;
-        color: #3e3e3e;
-    }
-    /** About Me */
-    
-    #aboutme {
-        background: #efefef;
-        min-height: 400px;
-        padding: 5%;
-        width: 90%;
-    }
-    
-    @media screen and (max-width: 900px) {
-        #hi h2 {
-            margin: 150px 0 0 20px;
-        }
-    }
-    
-    @media screen and (max-width: 700px) {
-        #frPage {
-            background-size: auto 460px;
-            background-position-y: top center;
-        }
-        #hi {
-            background-position: -100px!important;
-        }
-    }
+}

@@ -17,19 +17,19 @@
 
 
     <div id="accueil">
-        <h1 v-on:click="goToHome">Quentin CHAPELLE</h1>
+        <h1>Quentin CHAPELLE</h1>
 
         <div id="lang-container">
-            <div id="open_fr_website" class="fr_description" onclick="window.location.href = '#frPage';">
+            <div id="open_fr_website" class="fr_description" onclick="window.location.href = 'fr.html';">
                 <img src="./assets/img/france.png">
                 <p>Bienvenue,
                     <br> Vous souhaitez en savoir plus sur mes expériences profesionnelles, projets et compétences?
                     <br> </p>
-                <a class="enter" href="#frPage">Entrez</a>
+                <a class="enter" href="fr.html">Entrez</a>
 
             </div>
 
-            <div class="uk_description" v-on:click="openEnglishSite">
+            <!--<div class="uk_description" v-on:click="openEnglishSite">
                 <img src="./assets/img/uk.png">
                 <br>
                 <p>Welcome,
@@ -37,12 +37,11 @@
                     <br> </p>
                 <a class="enter" href="#">Entrer</a>
 
-            </div>
+            </div>-->
+
         </div>
 
     </div>
-
-    ${require('./fr-version/frpage.html')}
 
 </body>
 
