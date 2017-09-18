@@ -170,6 +170,18 @@
     margin-left: 5px;
 }
 
+.clermontech-logo {
+    width: 40px;
+    height: 40px;
+    background: #1f85c7 url(../assets/img/clermontech-classic-slim.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    float: right;
+    margin-left: 5px;
+}
+
 #more_article_1,
 #more_article_2 {
     visibility: none;
@@ -386,12 +398,17 @@
 /** About Me */
 
 #aboutme,
-#articles {
+#articles,
+#talk {
     background: #efefef;
     min-height: 400px;
     padding: 5%;
     width: 90%;
     overflow: auto;
+}
+
+#talk {
+    padding: 0 5% 5% 5%;
 }
 
 
@@ -445,11 +462,12 @@
 
 .social img {
     float: left;
-    width: 100px;
+    width: 6vw;
+    min-width: 50px;
 }
 
 .social .label {
-    line-height: 100px;
+    line-height: 6vw;
     display: inline-block;
     font-size: 1.4em;
     color: #d2d2d2;
@@ -471,6 +489,9 @@
 @media screen and (max-width: 900px) {
     .ex-list {
         flex-direction: column;
+    }
+    .social .label {
+        display: none;
     }
 }
 

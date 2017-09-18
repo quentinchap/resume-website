@@ -15,13 +15,14 @@ $('.menu-item').click(function() {
 
 function openNav(id) {
     document.getElementById(id).style.width = "100%";
-    document.getElementById(id).getElementsByClassName("sidenav")[0].style.width = "250px";
+    document.getElementById(id).getElementsByClassName("sidenav")[0].style.right = "0";
+    //$(".sidenav")[0].css({ width: "250px" });
     document.getElementById(id).style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav(id) {
     document.getElementById(id).style.width = "0";
-    document.getElementById(id).getElementsByClassName("sidenav")[0].style.width = "0";
+    document.getElementById(id).getElementsByClassName("sidenav")[0].style.right = "-260px";
 }
 
 function clickOnMenu(lang, section) {
