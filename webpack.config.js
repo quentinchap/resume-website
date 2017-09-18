@@ -75,7 +75,8 @@ var cvPageConfig = Object.assign({}, config, {
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
         }),
         new HtmlWebpackPlugin({
             filename: 'fr.html',

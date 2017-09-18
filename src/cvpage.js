@@ -8,8 +8,8 @@ import '../node_modules/animate.css/animate.min.css';
 require('./scripts/sideNavMenu');
 require('./scripts/article');
 require('./lib/anime.min');
+require('./lib/jquery.lazy.min');
 require('./lib/parlx.min');
-require('./lib/jquery.viewportchecker.min');
 require('./scripts/progressbar');
 require('./scripts/scrollAnimation');
 

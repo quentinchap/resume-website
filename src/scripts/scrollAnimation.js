@@ -1,5 +1,9 @@
 let blocked = false;
 
+(function(jQuery) {
+    $('.lazy').Lazy();
+}($));
+
 
 $(window).scroll(function() {
 
