@@ -105,9 +105,18 @@
     height: 40px;
 }
 
+.card-lang .card-ex-content {
+    line-height: 32px;
+}
 
-/** Articles */
+.card-lang img {
+    margin-right: 20px;
+}
 
+
+/** Articles & talks*/
+
+#list-talks,
 #list-article {
     display: flex;
     flex-wrap: wrap;
@@ -138,7 +147,7 @@
 
 .card-article .date {
     font-weight: 400;
-    color: rgba(60, 60, 60, 0.48);
+    color: #636363;
     font-size: 0.8em;
 }
 

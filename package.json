@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
+        "build-win": "webpack -p",
         "build": "rm -r build/* && webpack",
         "build-prod": "rm -r build/* && webpack -p",
         "watch": "webpack --watch",
