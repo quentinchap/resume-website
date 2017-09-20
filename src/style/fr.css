@@ -2,7 +2,7 @@
 
 #toolbar,
 #sticky-toolbar {
-    min-width: 350px;
+    min-width: 310px;
     display: flex;
     width: calc(100% - 10px);
     height: 60px;
@@ -110,6 +110,8 @@
 }
 
 .card-lang img {
+    width: 32px;
+    height: 32px;
     margin-right: 20px;
 }
 
@@ -574,6 +576,12 @@
         background: white;
         border: 1px solid #e4e4e4;
         float: left;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    span.profession {
+        font-size: 12px;
     }
 }
 

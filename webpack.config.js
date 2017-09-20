@@ -23,7 +23,7 @@ var moduleConf = {
         },
 
         {
-            test: /\.(png|jpg|jpeg|svg)$/,
+            test: /\.(png|jpg|jpeg|svg|ico)$/,
             loader: 'file-loader?name=/assets/img/[name]-[hash].[ext]'
         },
         {
