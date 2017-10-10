@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <video poster="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.jpg?alt=media&token=7a4356f3-0ab8-4275-b6b3-1b62f3990c10" id="bgvid" playsinline autoplay muted>
+    <video poster="${require('./assets/img/back.jpg')}" id="bgvid" playsinline autoplay muted>
     <source src="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.webm?alt=media&token=8ed4cf65-6c2c-4cae-b2b2-a755982d3ca0" type="video/webm">
     <source src="https://firebasestorage.googleapis.com/v0/b/sitev2-c9616.appspot.com/o/back.mp4?alt=media&token=c9a6be7d-8a8c-4883-8494-8f2a53abfbff" type="video/mp4">
     </video>
@@ -52,15 +52,15 @@
 
             </div>
 
-            <!--<div class="uk_description" v-on:click="openEnglishSite">
+            <div class="uk_description" onclick="window.location.href = 'en.html';">
                 <img src="./assets/img/uk.png">
                 <br>
                 <p>Welcome,
                     <br> do you want know more about my professional experiences, projects and about my skills?
                     <br> </p>
-                <a class="enter" href="#">Entrer</a>
+                <a class="enter" href="en.html">Entrer</a>
 
-            </div>-->
+            </div>
 
         </div>
 

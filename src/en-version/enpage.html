@@ -1,0 +1,81 @@
+<div id="frSideNav">
+    <div class="sidenav">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <a href="javascript:void(0)" class="menu-item" data-lang="fr" data-section="aboutme">A propos de moi</a>
+        <!--   <a href="#">Compétences</a>
+                    <a href="#">Education</a>
+                    <a href="#">Expériences</a> -->
+        <a href="javascript:void(0)" class="menu-item" data-lang="fr" data-section="dernier-projet">Derniers projets</a>
+        <a href="javascript:void(0)" class="menu-item" data-lang="fr" data-section="articles">Articles</a>
+        <a href="javascript:void(0)" class="menu-item" data-lang="fr" data-section="talk">Talks</a>
+        <a href="javascript:void(0)" class="menu-item" data-lang="fr" data-section="contact">Contact</a>
+    </div>
+</div>
+
+
+<div id="sticky-toolbar">
+    <img alt="Photo de profil" src="${require('../assets/img/photoProfil.jpg')}" class="photoProfil" />
+    <p class="titleSite">Quentin <strong>CHAPELLE</strong><br> <span class="profession">Analyste développeur fullstack</span></p>
+    <img alt="ouvrir le menu" src="${require('../assets/img/menu.png')}" class="menu-button-fr" />
+</div>
+<div id="content">
+    <div id="toolbar">
+        <img alt="Photo de profil" src="${require('../assets/img/photoProfil.jpg')}" class="photoProfil" />
+        <div class="titleSite"></div>
+        <img alt="ouvrir le menu" src="${require('../assets/img/menu.png')}" class="menu-button-fr" />
+    </div>
+    <section class="parallax hi-parallax">
+        <div id="hi">
+            <h2>Hi, I'm <br> <span class="name">Quentin CHAPELLE</span></h2>
+        </div>
+    </section>
+    <section id="aboutme">
+        <h1> About me </h1>
+        <div class="first-section">
+
+            <!-- Qui suis-je -->
+            ${require('./whoiam.html')}
+
+            <!-- Compétences -->
+            ${require('./competencies.html')}
+
+
+        </div>
+        <div class="first-section">
+            <div class="card-pro">
+                <!-- Compétences pro -->
+                ${require('./pro.html')}
+            </div>
+
+            <div class="card-for-lang">
+                <!-- Formation -->
+                ${require('./formation.html')}
+
+                <!-- Lang -->
+                ${require('./lang.html')}
+            </div>
+        </div>
+        <div>
+
+        </div>
+
+
+    </section>
+    <section id="dernier-projet" class="parallax work-parallax" class="hideme">
+        <!-- Formation -->
+        ${require('./work.html')}
+    </section>
+
+    <section id="articles">
+        ${require('./article.html')}
+    </section>
+
+    <section id="talk">
+        ${require('./talk.html')}
+    </section>
+
+    <section id="contact" class="parallax contact-parallax" class="hideme">
+        <!-- Formation -->
+        ${require('./contact.html')}
+    </section>
+</div>

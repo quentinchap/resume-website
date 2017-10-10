@@ -83,6 +83,11 @@ var cvPageConfig = Object.assign({}, config, {
             template: './src/fr.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: 'en.html',
+            template: './src/en.html',
+            inject: true
+        }),
         new ExtractTextPlugin("styles-cvpage.css")
     ],
     module: moduleConf

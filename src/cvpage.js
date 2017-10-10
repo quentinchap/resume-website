@@ -14,3 +14,4 @@ require('./scripts/progressbar');
 require('./scripts/scrollAnimation');
 
 require('./fr.html');
+require('./en.html');
