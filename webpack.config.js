@@ -34,7 +34,8 @@ var moduleConf = {
             test: /\.js$/,
             loader: 'babel-loader',
             query: {
-                presets: ['es2015']
+                presets: ["babel-preset-es2015"].map(require.resolve)
+                    //presets: ['es2015']
             }
         }
     ]
