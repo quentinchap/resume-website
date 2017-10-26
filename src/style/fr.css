@@ -1,3 +1,8 @@
+.logo-test {
+    width: 20px;
+}
+
+
 /** =============== Toolbar =============== */
 
 #toolbar,
@@ -82,27 +87,44 @@
     display: flex;
 }
 
+.slick-slide {
+    text-align: center;
+}
+
+#carousel-work .item-car {
+    max-width: 84%;
+    margin: 0 2% 0 2%;
+    text-align: justify;
+    background: #3c3c3c;
+    padding: 10px;
+    height: 230px;
+}
+
+.more-info-work {
+    text-align: center;
+}
+
+.more-info-work a {
+    color: #3c3c3c;
+    padding: 5px;
+    background: white;
+    text-transform: uppercase;
+}
+
+#carousel-work .item-car .logo {
+    height: 40px;
+}
+
+.car-img img {
+    margin: auto;
+}
+
 .ex-item {
     flex: 1;
     margin: 10px;
     background: #3c3c3c;
     text-align: center;
     padding: 20px;
-}
-
-.ex-item p {
-    text-align: justify;
-    padding: 5px;
-}
-
-.ex-item a,
-.ex-item a:hover {
-    padding: 0;
-    color: #9fb9c3;
-}
-
-.ex-item .logo {
-    height: 40px;
 }
 
 .card-lang .card-ex-content {
@@ -364,7 +386,7 @@
 }
 
 .work-parallax {
-    height: 550px;
+    height: 450px;
 }
 
 .icon {
@@ -506,43 +528,13 @@
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) {
-    .ex-item {
-        height: 150px;
-    }
-    .work-parallax {
-        height: 800px;
-    }
-    #work-bg {
-        height: 1000px!important;
-    }
-}
-
 @media screen and (max-width: 400px) {
-    .work-parallax {
-        height: 1150px;
-    }
-    #work-bg {
-        height: 1300px!important;
-    }
-    .ex-item {
-        height: 300px;
-    }
     .year-ex {
         flex: 0.4;
         font-size: 0.8em;
     }
-}
-
-@media screen and (min-width: 400px) and (max-width: 700px) {
-    .ex-item {
-        height: 250px;
-    }
     .work-parallax {
-        height: 950px;
-    }
-    #work-bg {
-        height: 1100px!important;
+        height: 550px;
     }
 }
 
@@ -555,9 +547,6 @@
         background: white;
         border: 1px solid #e4e4e4;
         float: left;
-    }
-    .work-parallax {
-        height: 1000px;
     }
 }
 

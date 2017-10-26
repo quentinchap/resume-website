@@ -23,9 +23,11 @@ var moduleConf = {
         },
 
         {
-            test: /\.(png|jpg|jpeg|svg|ico)$/,
+            test: /\.(png|jpg|jpeg|svg|ico|gif)$/,
             loader: 'file-loader?name=/assets/img/[name]-[hash].[ext]'
         },
+        { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+        { test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
         {
             test: /\.(pdf)$/,
             loader: 'file-loader?name=/assets/pdf/[name].[ext]'
