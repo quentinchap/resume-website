@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var config = {
     // TODO: Add common Configuration
@@ -76,6 +77,11 @@ var cvPageConfig = Object.assign({}, config, {
         filename: "bundle-cv.js"
     },
     plugins: [
+        new CopyWebpackPlugin([{
+            context: 'src/angular2-APIHour-24/',
+            from: '**',
+            to: 'angular2-APIHour-24'
+        }]),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
