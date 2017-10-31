@@ -6,6 +6,8 @@ import '../node_modules/animate.css/animate.min.css';
 require('slick-carousel/slick/slick.css');
 require('slick-carousel/slick/slick-theme.css');
 
+import '../node_modules/venobox/venobox/venobox.css';
+require('venobox');
 
 require('slick-carousel');
 require('./scripts/sideNavMenu');
@@ -18,6 +20,10 @@ require('./scripts/scrollAnimation');
 
 require('./fr.html');
 require('./en.html');
+
+$(document).ready(function() {
+    $('.venobox').venobox();
+});
 
 function paramSlick() {
     if ($(window).width() < 640) {
@@ -33,8 +39,3 @@ function paramSlick() {
 }
 
 paramSlick();
-
-
-$(window).resize(function() {
-    //  paramSlick();
-});
