@@ -1,7 +1,7 @@
 import './style/style.css';
 import './style/fr.css';
 import './style/sideNav.css';
-import './style/sideNav.css';
+import './style/sam.css';
 import '../node_modules/animate.css/animate.min.css';
 require('slick-carousel/slick/slick.css');
 require('slick-carousel/slick/slick-theme.css');
@@ -24,6 +24,8 @@ require('./en.html');
 $(document).ready(function() {
     $('.venobox').venobox();
 });
+
+
 
 function paramSlick() {
     if ($(window).width() < 640) {
