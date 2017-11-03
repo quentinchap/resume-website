@@ -25,6 +25,8 @@ $(document).ready(function() {
     $('.venobox').venobox();
 });
 
+
+
 function paramSlick() {
     if ($(window).width() < 640) {
         $('#carousel-work').slick({ "slidesToShow": 1, "slidesToScroll": 1 })
