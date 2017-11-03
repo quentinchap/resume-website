@@ -1,13 +1,16 @@
 <div id="work-bg">
 </div>
 
+
 <div id="work-content">
     <h1> Mes derniers projets </h1>
+    ${require('./sam.html')} ${require('./dev-mobile.html')}
+
 
     <div id="carousel-work">
         <div class="item-car">
             <div class="car-img">
-                <img class="logo" alt="redux" src="${require('../assets/img/sam-ex.png')}" />
+                <img class="logo lazy" alt="SAM" data-src="${require('../assets/img/work/sam-ex.png')}">
             </div>
             <div class="line"></div>
             <p>
@@ -15,63 +18,50 @@
             </p>
 
             <div class="more-info-work trigger">
-                <a class="venobox" data-vbtype="inline" title="My Description" href='#sam-description'>
+                <a class="venobox" data-vbtype="inline" title="SAM & SAM'Bot" href='#sam-description'>
                 En Savoir plus
-            </a>
-                <div id="sam-description" style="display:none;">
-                    <h1>SAM & SAM'Bot</h1>
-                    <p>
-                        <p>SAM est née pendant le Hackathon interne Michelin de 2017. Il vient d'un constat simple, beaucoup de démarches, de problème pourrait être réglé de manière plus efficace avec une meilleur capitalisation de l'information.</p>
-                        <p> Afin d'y parvenir, nous avons conçus et développé une plateforme collaborative basé sur l'échange et le partage entre utilisateur. Cependant, un problème restait en suspend, comment la mettre en avant et éviter la traditionnelle
-                            désertion d'après lancement ?
-                        </p>
-                        <p>
-                            Pour répondre à cette problèmatique nous avons conçus une extension web se déclenchant sur tous les sites du groupe et proposant une l'aide personnalisé en fonction du domaine via un chatbot.
-                        </p>
-                        <p>
-                            D'un point de vu technique, ce projet c'est appuyé sur des service sass tel que firebase et Dialogflow et sur des technologies web tel que VueJs et les web extension.
-                        </p>
-                        <p>
-                            Tous ceci a était conçu, développé et marketé en 48 heures par une équipe de septs personnes. Elle allie la puissance d'un chatbot développé par une équipe de sept personnes
-                        </p>
-                </div>
+                </a>
             </div>
 
         </div>
-        <div class="item-car">
-            <div class="car-img">
-                <img class="logo" alt="redux" src="${require('../assets/img/redux.svg')}" />
+        <div class=" item-car ">
+            <div class="car-img ">
+                <img class="logo lazy" alt="Redux" data-src="${require('../assets/img/work/redux.svg')}">
             </div>
-            <div class="line"></div>
+            <div class="line "></div>
             <p>
                 Mise en place de ngrx, une implémentation de Redux sur une application Legacy écrite en Ionic (2+). Les difficultés inhérentes aux contraintes fonctionnelles de l'application ayant induites de nombreuses analyses poussées. </p>
         </div>
-        <div class="item-car">
-            <div class="car-img">
-                <img class="logo" alt="docker" src="${require('../assets/img/docker-ex.svg')}" />
+        <div class="item-car ">
+            <div class="car-img ">
+                <img class="logo lazy" alt="Docker" data-src="${require('../assets/img/work/docker-ex.svg')}">
             </div>
-            <div class="line"></div>
+            <div class="line "></div>
             <p>
                 Conception et mise en place d'une architecture applicative complexe avec docker.<br /> Haute disponibilité, fléxibilité, sécurité, etc. furent autant de problèmatiques à prendre en compte afin d'assurer la réussite du projet.
-
             </p>
         </div>
-        <div class="item-car">
+        <div class="item-car ">
             <div class="car-img">
-                <img class="logo" alt="angular" src="${require('../assets/img/angular-ex.svg')}" />
+                <img class="logo lazy" alt="Android" data-src="${require('../assets/img/work/smartphone.svg')}">
             </div>
-            <div class="line"></div>
+            <div class="line "></div>
             <p>
-                Conception et développement d'applications mobiles internes en angular et en angularJs via le framework ionic. L'un des points les plus importants étant d'obtenir des solutions les plus ergonomiques possibles.
+                Conception et développement d'applications mobiles. L'un des points les plus importants étant d'obtenir des solutions les plus ergonomiques possibles.
             </p>
+            <!--<div class="more-info-work trigger">
+                <a class="venobox" data-vbtype="inline" title="Applications mobiles" href='#dev-mobile-description'>
+                        En Savoir plus
+                        </a>
+            </div>-->
         </div>
-        <div class="item-car">
-            <div class="car-img">
-                <img class="logo" alt="devotics" src="${require('../assets/img/devotics-ex.png')}" />
+        <div class="item-car ">
+            <div class="car-img ">
+                <img class="logo lazy" alt="Devotics" data-src="${require('../assets/img/work/devotics-ex.png')}">
             </div>
-            <div class="line"></div>
+            <div class="line "></div>
             <p>
-                Cofondation de Devotics. Cette association s'articule autour du site <a href="https://devotics.fr">devotics.fr</a> a pour but d'informer et de promouvoir la domotique et les nouvelles technologies en général.
+                Cofondation de Devotics. Cette association s'articule autour du site <a href="https://devotics.fr ">devotics.fr</a> a pour but d'informer et de promouvoir la domotique et les nouvelles technologies en général.
             </p>
         </div>
     </div>
