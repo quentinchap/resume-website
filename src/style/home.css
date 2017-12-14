@@ -34,7 +34,7 @@
 #accueil,
 #lang-container,
 h1 {
-    transition-property: all;
+    transition-property: height;
     transition-duration: 600ms;
     transition-timing-function: ease-in;
 }
