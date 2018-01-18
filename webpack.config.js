@@ -114,6 +114,32 @@ var cvPageConfig = Object.assign({}, config, {
 });
 
 
+var cvPageConfig = Object.assign({}, config, {
+    name: "cvpage",
+    entry: "./src/projects/index.js",
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        publicPath: '.',
+        filename: "bundle-projects.js"
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'sam-fr.html',
+            template: './src/projects/sam-fr.html',
+            inject: true
+        }),
+        new ExtractTextPlugin("styles-projects.css")
+    ],
+    module: moduleConf
+
+});
+
+
 
 
 module.exports = [indexConfig, cvPageConfig];
