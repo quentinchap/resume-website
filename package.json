@@ -56,10 +56,12 @@
     "invariant": "^2.2.2",
     "jsesc": "^2.5.1",
     "minimatch": "^3.0.4",
+    "node-sass": "^4.7.2",
     "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.6.0",
+    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.8.2"
   }
 }

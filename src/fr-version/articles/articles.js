@@ -1,3 +1,5 @@
+import "./articles.scss";
+
 let multiplicateur = 1;
 
 
