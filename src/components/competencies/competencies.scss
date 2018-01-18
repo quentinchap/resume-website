@@ -1,0 +1,33 @@
+.progress {
+    width: 100%;
+    height: 10px;
+}
+
+.pourcent {
+    width: 26px;
+    color: #efefef;
+    background: #3c3c3c;
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    top: -10px;
+}
+
+.progress-wrap {
+    background: #3c3c3c;
+    margin: 0 0 15px 0;
+    position: relative;
+}
+
+.progress-wrap .progress-bar {
+    background: #ddd;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.bar p {
+    margin: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+}

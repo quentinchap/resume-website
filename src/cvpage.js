@@ -11,7 +11,8 @@ require('venobox');
 
 require('slick-carousel');
 require('./scripts/sideNavMenu');
-require('./fr-version/articles/articles');
+require('./components/articles/articles');
+require('./components/competencies/competencies');
 require('./lib/anime.min');
 require('./lib/jquery.lazy.min');
 require('./lib/parlx.min');
