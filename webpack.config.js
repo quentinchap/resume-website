@@ -115,7 +115,7 @@ var cvPageConfig = Object.assign({}, config, {
 
 
 var projectsConfig = Object.assign({}, config, {
-    name: "cvpage",
+    name: "projectPage",
     entry: "./src/projects/index.js",
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -143,7 +143,6 @@ var projectsConfig = Object.assign({}, config, {
     module: moduleConf
 
 });
-
 
 
 
