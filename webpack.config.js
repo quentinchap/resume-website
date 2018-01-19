@@ -114,7 +114,7 @@ var cvPageConfig = Object.assign({}, config, {
 });
 
 
-var samConfig = Object.assign({}, config, {
+var projectsConfig = Object.assign({}, config, {
     name: "cvpage",
     entry: "./src/projects/index.js",
     output: {
@@ -133,6 +133,11 @@ var samConfig = Object.assign({}, config, {
             template: './src/projects/sam-fr.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: 'docker-fr.html',
+            template: './src/projects/docker-fr.html',
+            inject: true
+        }),
         new ExtractTextPlugin("styles-projects.css")
     ],
     module: moduleConf
@@ -142,4 +147,4 @@ var samConfig = Object.assign({}, config, {
 
 
 
-module.exports = [indexConfig, cvPageConfig, samConfig];
+module.exports = [indexConfig, cvPageConfig, projectsConfig];

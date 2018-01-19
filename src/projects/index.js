@@ -3,9 +3,9 @@ import '../style/style.css';
 import '../style/fr.css';
 import '../style/sideNav.css';
 
-import './sam.scss';
-import './sam.phone.scss';
-import './sam.tablet.scss';
+import './projects.scss';
+import './projects.phone.scss';
+import './projects.tablet.scss';
 
 import '../../node_modules/animate.css/animate.min.css';
 require('slick-carousel/slick/slick.css');
