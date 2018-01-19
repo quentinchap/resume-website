@@ -1,0 +1,10 @@
+@import '../style/theme.scss';
+@media (max-width: $break-tablet) {
+    .label-back,
+    .profession {
+        display: none;
+    }
+    .author {
+        max-width: 160px;
+    }
+}

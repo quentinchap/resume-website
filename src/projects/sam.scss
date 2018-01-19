@@ -9,6 +9,24 @@
     }
 }
 
+.work-modal {
+    padding-top: 56px;
+    h1 {
+        display: none;
+    }
+    h2 {
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: 0;
+        letter-spacing: .3rem;
+    }
+    h3 {
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+}
+
 #toolbar-projects {
     position: fixed;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -16,26 +34,28 @@
     width: 100%;
     background: white;
     height: 56px;
+    .project-sheet {
+        line-height: 56px;
+        text-align: center;
+        flex: 3;
+    }
     h2 {
         font-size: 1.4rem;
         font-weight: 100;
         text-transform: uppercase;
         text-align: center;
-        margin-top: 0;
+        margin: 0;
         letter-spacing: .3rem;
-    }
-    .project-sheet {
-        flex: 3;
     }
     .back {
         flex: 1;
         img {
-            padding: 0 10px;
+            padding: 16px 10px;
         }
         a {
+            line-height: 56px;
             display: flex;
             font-family: 'Assistant', sans-serif;
-            line-height: 56px;
             font-weight: 100;
             padding: 0;
             color: black;
@@ -47,23 +67,18 @@
 }
 
 .author {
-    flex: 1;
-}
-
-.project-sheet {
-    line-height: 56px;
-    text-align: center;
-}
-
-.author {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    display: flex;
     display: flex;
     text-align: right;
     p {
-        margin: 5px 0;
+        margin: 8px 0;
     }
     .photoProfil {
-        margin: 5px 10px;
-        ;
+        margin: 0;
+        padding: 8px 10px;
     }
 }
 
@@ -75,27 +90,9 @@ body {
     background: rgb(239, 239, 239);
 }
 
-.work-modal {
-    padding: 20px;
-}
-
 .logo-tech {
     height: 40px!important;
     padding: 5px;
-}
-
-.work-modal h2 {
-    font-weight: 100;
-    text-transform: uppercase;
-    /* text-align: center; */
-    margin-top: 0;
-    letter-spacing: .3rem;
-}
-
-.work-modal h3 {
-    font-weight: 100;
-    text-transform: uppercase;
-    margin-top: 30px;
 }
 
 #carousel-galerie {

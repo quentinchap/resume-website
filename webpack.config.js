@@ -114,7 +114,7 @@ var cvPageConfig = Object.assign({}, config, {
 });
 
 
-var cvPageConfig = Object.assign({}, config, {
+var samConfig = Object.assign({}, config, {
     name: "cvpage",
     entry: "./src/projects/index.js",
     output: {
@@ -142,4 +142,4 @@ var cvPageConfig = Object.assign({}, config, {
 
 
 
-module.exports = [indexConfig, cvPageConfig];
+module.exports = [indexConfig, cvPageConfig, samConfig];
