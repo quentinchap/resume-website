@@ -1,0 +1,6 @@
+@import '../../style/theme.scss';
+@media (max-width: $break-phone) {
+    .card-article {
+        min-width: 50%;
+    }
+}

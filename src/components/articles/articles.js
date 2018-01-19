@@ -1,4 +1,5 @@
 import "./articles.scss";
+import "./articles.phone.scss";
 
 let multiplicateur = 1;
 
