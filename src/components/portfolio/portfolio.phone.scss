@@ -1,0 +1,33 @@
+@import '../../style/theme.scss';
+@media (max-width: $break-phone) {
+    #carousel-portfolio {
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+
+        .content {
+            table {
+                height: auto;
+                max-height: 600px;
+                max-width: 90%;
+            }
+            td{
+                max-width: 90%;
+            }
+            tr {
+                display: flex;
+                width: 100vw;
+                flex-direction: column;
+            }
+            .content p,
+            iframe,
+            img {
+                max-width: 80%;
+                margin: auto;
+            }
+        }
+    }
+}
