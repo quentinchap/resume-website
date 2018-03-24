@@ -7,7 +7,7 @@
     "build": "rm -r build/* && webpack",
     "build-prod": "rm -r build/* && webpack -p",
     "watch": "webpack --watch",
-    "serve": "webpack --watch & webpack-dev-server  --inline --hot --content-base ./build"
+    "start": "webpack --watch & webpack-dev-server  --inline --hot --content-base ./build"
   },
   "repository": {
     "type": "git",
