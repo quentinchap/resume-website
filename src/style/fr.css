@@ -352,7 +352,8 @@
 
 #aboutme,
 #articles,
-#talk {
+#talk,
+#portfolio {
     background: #efefef;
     min-height: 400px;
     padding: 5%;
@@ -360,7 +361,8 @@
     overflow: auto;
 }
 
-#talk {
+#talk,
+#portfolio {
     padding: 0 5% 5% 5%;
 }
 

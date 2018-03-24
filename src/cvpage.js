@@ -2,6 +2,7 @@ import './style/style.css';
 import './style/fr.css';
 import './style/sideNav.css';
 import './style/projects.scss';
+import './style/projects.scss';
 import '../node_modules/animate.css/animate.min.css';
 require('slick-carousel/slick/slick.css');
 require('slick-carousel/slick/slick-theme.css');
@@ -13,6 +14,7 @@ require('slick-carousel');
 require('./scripts/sideNavMenu');
 require('./components/articles/articles');
 require('./components/competencies/competencies');
+require('./components/portfolio/portfolio');
 require('./lib/anime.min');
 require('./lib/jquery.lazy.min');
 require('./lib/parlx.min');
@@ -40,6 +42,8 @@ function paramSlick() {
     } else {
         $('#carousel-work').slick({ "slidesToShow": 4, "slidesToScroll": 4, "mobileFirst": true })
     }
+
+    $('#carousel-portfolio').slick({ "slidesToShow": 1, "slidesToScroll": 1 })
 }
 
 paramSlick();
