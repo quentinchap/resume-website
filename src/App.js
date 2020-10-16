@@ -10,14 +10,14 @@ import AboutMe from "./components/AboutMe";
 import { theme, defaultClasses } from "./theme";
 import Pro from "./components/Pro";
 import Education from "./components/Education";
-import { Card } from "@material-ui/core";
-import franceFlag from "./assets/img/france.png";
-import ukFlag from "./assets/img/uk.png";
-import esFlag from "./assets/img/es.png";
+
 import workBg from "./assets/img/work.jpeg";
 
 import linkedIn from "./assets/img/icon/linkedin.svg";
 import github from "./assets/img/icon/github.svg";
+import Languages from "./components/Languages";
+import Articles from "./components/Article";
+import Talk from "./components/Talk";
 
 function App() {
   const { t } = useTranslation();
@@ -68,49 +68,7 @@ function App() {
           </div>
           <div className={classes.column}>
             <Education />
-            <Card className={classes.section}>
-              <Typography
-                variant="h2"
-                gutterBottom
-                color="primary"
-                className={classes.columnTitle}
-              >
-                {t("language")}
-              </Typography>
-              <div
-                className={classes.column}
-                style={{ margin: 5, lineHeight: "42px", display: "flex" }}
-              >
-                <img
-                  alt="Français"
-                  src={franceFlag}
-                  style={{ margin: "5px 10px 5px 0px" }}
-                />{" "}
-                {t("nativeLanguage")}
-              </div>
-              <div
-                className={classes.column}
-                style={{ margin: 5, lineHeight: "42px", display: "flex" }}
-              >
-                <img
-                  alt="En"
-                  src={ukFlag}
-                  style={{ margin: "5px 10px 5px 0px" }}
-                />{" "}
-                {t("(TOEIC: 890) Capacités professionnelles complètes")}
-              </div>
-              <div
-                className={classes.column}
-                style={{ margin: 5, lineHeight: "42px", display: "flex" }}
-              >
-                <img
-                  alt="En"
-                  src={esFlag}
-                  style={{ margin: "5px 10px 5px 0px" }}
-                />{" "}
-                {t("basicLevel")}
-              </div>
-            </Card>
+            <Languages />
           </div>
         </div>
       </div>
@@ -132,7 +90,20 @@ function App() {
           >
             {t("personnalProject")}
           </Typography>
-          <div style={{ height: "200px" }} />
+          <div style={{ height: "200px" }}>
+            <Typography
+              variant="h2"
+              gutterBottom
+              color="primary"
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontSize: "1.8rem",
+              }}
+            >
+              Section en construction
+            </Typography>
+          </div>
         </div>
       </Parallax>
       <Typography
@@ -144,6 +115,7 @@ function App() {
       >
         {t("Articles")}
       </Typography>
+      <Articles />
 
       <Typography
         variant="h2"
@@ -154,6 +126,7 @@ function App() {
       >
         {t("Talks")}
       </Typography>
+      <Talk />
       <Parallax blur={0} bgImage={workBg} bgImageAlt="work" strength={200}>
         <div style={{ backgroundColor: "rgba(33,33,33,.69)" }}>
           <div
@@ -164,7 +137,14 @@ function App() {
               alignItems: "center",
             }}
           >
-            <div style={{ flex: 1, textAlign: "center", maxWidth: 300, marginRight:50 }}>
+            <div
+              style={{
+                flex: 1,
+                textAlign: "center",
+                maxWidth: 300,
+                marginRight: 50,
+              }}
+            >
               <a href="https://www.linkedin.com/in/quentinchapelle">
                 <img
                   alt="linkedin"

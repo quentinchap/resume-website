@@ -63,7 +63,20 @@ const Pro = () => {
       country: "France",
       shortDescription: t("partTimeTeacherJS"),
       challenges: [],
-      techno: [],
+      techno: [
+        {
+          name: "NodeJS / Express, ",
+        },
+        {
+          name: "ReactJS, ",
+        },
+        {
+          name: "Mongo DB, ",
+        },
+        {
+          name: "UX design, ",
+        },
+      ],
     },
     {
       major: true,
@@ -76,9 +89,19 @@ const Pro = () => {
       challenges: [
         t("Compréhension des processus supply"),
         t("Suivi d'avancement d'un partenaire exterieur"),
-        t("Proposition d'architectures et de solutions résiliantes"),
+        t("Propositions d'architectures et de solutions résiliantes"),
       ],
-      techno: [],
+      techno: [
+        {
+          name: t("Adaptabilité, "),
+        },
+        {
+          name: t("Scrum, "),
+        },
+        {
+          name: t("Connaissances en supply"),
+        },
+      ],
     },
     {
       major: true,
@@ -92,7 +115,7 @@ const Pro = () => {
         t("Time to market très court"),
         t("S'adapter aux différents métiers"),
         t("Multiplication des technologies utilisées"),
-        t("Montée en compétence en UX/Design Technologies"),
+        t("Montée en compétence en UX/Design"),
       ],
       techno: [
         {
@@ -260,14 +283,14 @@ const Pro = () => {
       shortDescription: t("emploisSaisonniers"),
       challenges: [
         t(
-          "Ambulancier à Tissier - Nevers 58000 : Août 2011 et Juillet - Août 2012"
+          "Ambulancier à Tissier - Nevers 58000 - Août 2011 et Juillet - Août 2012"
         ),
-        t("Service Comptabilité à Logivie - Nevers 58000 : Août 2010"),
+        t("Service Comptabilité à Logivie - Nevers 58000 - Août 2010"),
         t(
-          "Chargé d'accueil à la Caisse d'épargne - Coulanges-lés-Nevers 58660 : Juillet 2009"
+          "Chargé d'accueil à la Caisse d'épargne - Coulanges-lés-Nevers 58660 - Juillet 2009"
         ),
         t(
-          "Service informatique à Logivie - Nevers 58000 : Août 2008 et Août 2009"
+          "Service informatique à Logivie - Nevers 58000 - Août 2008 et Août 2009"
         ),
       ],
       techno: [],

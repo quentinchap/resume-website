@@ -40,6 +40,13 @@ const defaultClasses = makeStyles({
     marginTop: 0,
     letterSpacing: ".3rem",
   },
+  sectionTitleCompact: {
+    fontSize: "3rem",
+    fontWeight: 100,
+    textTransform: "uppercase",
+    marginTop: 0,
+    letterSpacing: ".3rem",
+  },
   moreInfo: {
     height: 15,
     width: 100,
