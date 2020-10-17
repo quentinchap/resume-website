@@ -67,6 +67,7 @@ const DynamicCard = ({ exp }) => {
             style={{ alignItems: "center", display: "flex" }}
           >
             <Typography variant="body1" gutterBottom color="primary">
+              {exp.title}
               {t("Découvrir cette expérience")}
             </Typography>
           </div>

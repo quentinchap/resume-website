@@ -41,15 +41,6 @@ const Education = () => {
 
   return (
     <Card className={classes.section}>
-      <Typography
-        variant="h2"
-        gutterBottom
-        color="primary"
-        className={classes.columnTitle}
-      >
-        {t("eduction section title")}
-      </Typography>
-
       {items.map((i) => (
         <DynamicCard exp={i} />
       ))}

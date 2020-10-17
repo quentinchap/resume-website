@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
 import franceFlag from "../assets/img/france.png";
@@ -25,18 +25,9 @@ const useStyle = makeStyles((theme) => ({
 
 const Languages = () => {
   const { t } = useTranslation();
-  const classes = defaultClasses();
   const customClasses = useStyle();
   return (
-    <Card className={classes.section}>
-      <Typography
-        variant="h2"
-        gutterBottom
-        color="primary"
-        className={classes.columnTitle}
-      >
-        {t("language")}
-      </Typography>
+    <Fragment>
       <div className={customClasses.column}>
         <img alt="Français" src={franceFlag} className={customClasses.icons} />{" "}
         {t("nativeLanguage")}
@@ -49,7 +40,7 @@ const Languages = () => {
         <img alt="En" src={esFlag} className={customClasses.icons} />{" "}
         {t("basicLevel")}
       </div>
-    </Card>
+    </Fragment>
   );
 };
 

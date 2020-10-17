@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
@@ -156,7 +156,7 @@ const Pro = () => {
       major: true,
       title: t("Chargé d'enseignement vacataire"),
       period: "2016",
-      compagny: "UNIVERSITÉ BLAISE PASCAL",
+      compagny: "UBP",
       city: "Clermont-Ferrand",
       country: "France",
       shortDescription: t("partTimeTeacherC"),
@@ -298,20 +298,11 @@ const Pro = () => {
   ];
 
   return (
-    <Card className={classes.section}>
-      <Typography
-        variant="h2"
-        gutterBottom
-        color="primary"
-        className={classes.columnTitle}
-      >
-        {t("profesionnal section title")}
-      </Typography>
-
+    <Fragment>
       {proItems.map((i) => {
         return <DynamicCard exp={i} />;
       })}
-    </Card>
+    </Fragment>
   );
 };
 

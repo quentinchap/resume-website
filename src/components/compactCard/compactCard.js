@@ -174,38 +174,36 @@ const CompactCard = ({ category, title, title2, text, list }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.artboard}>
-      <div className={classes.card}>
-        <div className={classes.card__side_bac}>
-          <div className={classes.card__cover}>
-            <h4 className={classes.card__heading}>
-              <span className={classes.card__heading_span}>{title2}</span>
-            </h4>
-          </div>
-          <div className={classes.card__details}>
-            {text ? text : ""}
-            {list ? (
-              <ul>
-                <li>Advanced JS and CSS</li>
-                <li>JS/CSS Preprocessors</li>
-                <li>JS Frameworks</li>
-                <li>Advanced Animations</li>
-                <li>Deployment Pipelines</li>
-                <li>Large Apps Architectures</li>
-                <li>Naming Conventions</li>
-              </ul>
-            ) : (
-              ""
-            )}
-          </div>
+    <div className={classes.card}>
+      <div className={classes.card__side_bac}>
+        <div className={classes.card__cover}>
+          <h4 className={classes.card__heading}>
+            <span className={classes.card__heading_span}>{title2}</span>
+          </h4>
         </div>
+        <div className={classes.card__details}>
+          {text ? text : ""}
+          {list ? (
+            <ul>
+              <li>Advanced JS and CSS</li>
+              <li>JS/CSS Preprocessors</li>
+              <li>JS Frameworks</li>
+              <li>Advanced Animations</li>
+              <li>Deployment Pipelines</li>
+              <li>Large Apps Architectures</li>
+              <li>Naming Conventions</li>
+            </ul>
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
 
-        <div className={classes.card__side_front}>
-          <div className={classes.card__theme}>
-            <div className={classes.card__theme_box}>
-              <p className={classes.card__subject}>{category}</p>
-              <p className={classes.card__title}>{title}</p>
-            </div>
+      <div className={classes.card__side_front}>
+        <div className={classes.card__theme}>
+          <div className={classes.card__theme_box}>
+            <p className={classes.card__subject}>{category}</p>
+            <p className={classes.card__title}>{title}</p>
           </div>
         </div>
       </div>

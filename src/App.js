@@ -1,5 +1,4 @@
 import React from "react";
-import HeaderImage from "./assets/img/profil2.jpg";
 import "./App.css";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useTranslation } from "react-i18next";
@@ -12,12 +11,17 @@ import Pro from "./components/Pro";
 import Education from "./components/Education";
 
 import workBg from "./assets/img/work.jpeg";
+import educ from "./assets/img/school.jpg";
+import pro from "./assets/img/profil2.jpg";
+import lang from "./assets/img/world.jpg";
 
 import linkedIn from "./assets/img/icon/linkedin.svg";
 import github from "./assets/img/icon/github.svg";
 import Languages from "./components/Languages";
 import Articles from "./components/Article";
 import Talk from "./components/Talk";
+import CompactCardFixedLeft from "./components/compactCard/compactCardFixedLeft";
+import CompactCardFixedRight from "./components/compactCard/compactCardFixedRight";
 
 function App() {
   const { t } = useTranslation();
@@ -25,51 +29,35 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Parallax
-        blur={0}
-        bgImage={HeaderImage}
-        bgImageAlt="the cat"
-        strength={200}
-      >
-        <Typography
-          variant="h2"
-          gutterBottom
-          style={{
-            fontFamily: "'Assistant', sans-serif",
-            fontSize: "1.5em",
-            margin: "150px 0 0 20px",
-            color: "rgba(148, 147, 147, 0.82)",
-            fontWeight: 100,
-          }}
-        >
-          {t("Welcome")}
-          <br />
-          {t("My name is")}
-        </Typography>
-        <Typography
-          variant="h1"
-          gutterBottom
-          style={{
-            fontSize: "1.7rem",
-            margin: "0px 0 0 20px",
-            fontWeight: 400,
-            color: "#3e3e3e",
-          }}
-        >
-          Quentin CHAPELLE
-        </Typography>
-        <div style={{ height: "200px" }} />
-      </Parallax>
       <div className={classes.postContainer}>
         <AboutMe />
-        <div className={classes.flexContainer}>
-          <div className={classes.column}>
-            <Pro />
-          </div>
-          <div className={classes.column}>
-            <Education />
-            <Languages />
-          </div>
+
+        <div style={{ marginBottom: 20 }}>
+          <CompactCardFixedRight
+            pic={pro}
+            center={true}
+            category="Expériences"
+            title="Pro."
+            text={<Pro />}
+          />
+        </div>
+        <div style={{ marginBottom: 20 }}>
+          <CompactCardFixedLeft
+            pic={educ}
+            center={true}
+            category={t("eduction section title")}
+            title="certif."
+            text={<Education />}
+          />
+        </div>
+        <div style={{ marginBottom: 20 }}>
+          <CompactCardFixedRight
+            pic={lang}
+            center={true}
+            category="Culture et"
+            title="Langue."
+            text={<Languages />}
+          />
         </div>
       </div>
 
