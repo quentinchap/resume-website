@@ -12,7 +12,6 @@ import Education from "./components/Education";
 
 import workBg from "./assets/img/work.jpeg";
 import educ from "./assets/img/school.jpg";
-import pro from "./assets/img/profil2.jpg";
 import lang from "./assets/img/world.jpg";
 
 import linkedIn from "./assets/img/icon/linkedin.svg";
@@ -33,13 +32,7 @@ function App() {
         <AboutMe />
 
         <div style={{ marginBottom: 20 }}>
-          <CompactCardFixedRight
-            pic={pro}
-            center={true}
-            category="Expériences"
-            title="Pro."
-            text={<Pro />}
-          />
+          <Pro />
         </div>
         <div style={{ marginBottom: 20 }}>
           <CompactCardFixedLeft

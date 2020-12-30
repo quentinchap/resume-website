@@ -7,7 +7,7 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles({
-  root: { display: "flex", flexWrap: "wrap", margin: "20px 0 20px 0" },
+  root: { display: "flex", flexWrap: "wrap", margin: "10px 0 10px 0" },
   dateDiv: { flex: 1, minWidth: 100, padding: 5 },
   contentDiv: { flex: 3, minWidth: 200 },
 });
@@ -41,6 +41,7 @@ const DynamicCard = ({ exp }) => {
               color="primary"
               style={{
                 fontWeight: 100,
+                fontSize: "1rem",
                 textTransform: "uppercase",
                 marginBottom: 0,
               }}
@@ -66,9 +67,18 @@ const DynamicCard = ({ exp }) => {
             className={classes.contentDiv}
             style={{ alignItems: "center", display: "flex" }}
           >
-            <Typography variant="body1" gutterBottom color="primary">
+            <Typography
+              variant="h6"
+              gutterBottom
+              color="primary"
+              style={{
+                fontWeight: 100,
+                fontSize: "1rem",
+                textTransform: "uppercase",
+                marginBottom: 0,
+              }}
+            >
               {exp.title}
-              {t("Découvrir cette expérience")}
             </Typography>
           </div>
           <ExpandMore />
@@ -136,9 +146,11 @@ const DynamicCard = ({ exp }) => {
                   <Typography variant="h6" gutterBottom color="primary">
                     {t("challenges")}
                   </Typography>
-                  <ul>
+                  <ul style={{ margin: 0, padding: 0 }}>
                     {exp.challenges.map((e) => (
-                      <li>{e}</li>
+                      <li style={{ textAlign: "left", fontSize: "1rem" }}>
+                        {e}
+                      </li>
                     ))}
                   </ul>
                   <Button

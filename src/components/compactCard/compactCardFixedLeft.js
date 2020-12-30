@@ -1,20 +1,26 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
+import DynamicCard from "../DynamicCard";
 
 const useStyles = makeStyles({
   "@media (min-width: 865px)": {
+    container: {
+      margin: "20px auto 20px auto",
+      width: "calc(52vw + 300px)",
+    },
+    card__side_front: {
+      width: "300px",
+    },
+
     card: {
-      backgroundColor: "#f5f5f5",
-      boxShadow: "0 2rem 6rem rgba(0, 0, 0, 0.15)",
       flex: "initial",
       position: "relative",
-      height: "600px",
-      width: "300px",
-      marginLeft: "10vw",
+      height: "640px",
+      width: "calc(52vw + 300px)",
     },
 
     card__side_back: {
-      height: "560px",
+      height: "600px",
       transition: "all 0.8s ease",
       backgroundColor: "#f5f5f5",
       position: "absolute",
@@ -23,7 +29,7 @@ const useStyles = makeStyles({
       left: "0",
       width: "52vw",
       borderRadius: "3px",
-      overflow: "hidden",
+      overflow: "scroll",
       boxShadow: "0 2rem 6rem rgba(0, 0, 0, 0.15)",
     },
 
@@ -53,12 +59,11 @@ const useStyles = makeStyles({
     fontWeight: "100",
   },
   card__side_front: {
-    height: "600px",
+    height: "640px",
     transition: "all 0.8s ease",
     position: "absolute",
     top: "0",
     left: "0",
-    width: "100%",
     borderRadius: "3px",
     boxShadow: "0 2rem 6rem rgba(0, 0, 0, 0.15)",
     backgroundSize: "cover",
@@ -66,7 +71,7 @@ const useStyles = makeStyles({
 
   card__details: {
     fontFamily: '"Inconsolata", monospace',
-    padding: "4vw 2vw",
+    padding: "0 2vw",
     "& ul": { listStyle: "none", width: "80%", margin: "0 auto" },
     "& ul li": {
       textAlign: "center",
@@ -77,6 +82,9 @@ const useStyles = makeStyles({
   },
 
   "@media (max-width: 865px)": {
+    container: {
+      marginBottom: 20,
+    },
     card: {
       height: "auto",
       borderRadius: "3px",
@@ -116,44 +124,53 @@ const useStyles = makeStyles({
   },
 });
 
-const CompactCardFixedLeft = ({ category, title, text, list, pic, center }) => {
+const CompactCardFixedLeft = ({
+  category,
+  title,
+  text,
+  list,
+  pic,
+  center,
+  labelList,
+}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.card}>
-      <div className={classes.card__side_back}>
-        <div className={classes.card__details}>
-          {text ? text : ""}
-          {list ? (
-            <ul>
-              <li>Advanced JS and CSS</li>
-              <li>JS/CSS Preprocessors</li>
-              <li>JS Frameworks</li>
-              <li>Advanced Animations</li>
-              <li>Deployment Pipelines</li>
-              <li>Large Apps Architectures</li>
-              <li>Naming Conventions</li>
-            </ul>
-          ) : (
-            ""
-          )}
+    <div className={classes.container}>
+      <div className={classes.card}>
+        <div className={classes.card__side_back}>
+          <div className={classes.card__details}>
+            {text ? text : ""}
+            {list
+              ? list.map((i) => {
+                  return <DynamicCard exp={i} />;
+                })
+              : ""}
+          </div>
         </div>
-      </div>
 
-      <div
-        className={classes.card__side_front}
-        style={{
-          backgroundPosition: center ? "center" : "",
-          backgroundImage:
-            "linear-gradient(to right bottom, rgba(189, 189, 189, 0.65), rgba(60, 60, 60, 0.7)), url(" +
-            pic +
-            ")",
-        }}
-      >
-        <div className={classes.card__theme}>
-          <div className={classes.card__theme_box}>
-            <p className={classes.card__subject}>{category}</p>
-            <p className={classes.card__title}>{title}</p>
+        <div
+          className={classes.card__side_front}
+          style={{
+            backgroundPosition: center ? "center" : "",
+            backgroundImage:
+              "linear-gradient(to right bottom, rgba(189, 189, 189, 0.65), rgba(60, 60, 60, 0.7)), url(" +
+              pic +
+              ")",
+          }}
+        >
+          <div className={classes.card__theme}>
+            <div className={classes.card__theme_box}>
+              <p className={classes.card__subject}>{category}</p>
+              <p className={classes.card__title}>{title}</p>
+              {list ? (
+                <p>
+                  {list.length} {labelList}
+                </p>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         </div>
       </div>

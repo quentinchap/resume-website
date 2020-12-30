@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
+
 import { defaultClasses } from "../theme";
+import pro from "../assets/img/profil2.jpg";
+
 import android from "../assets/img/icon/android.svg";
 import angular from "../assets/img/icon/angular.svg";
 import grails from "../assets/img/icon/grails.svg";
@@ -23,6 +24,7 @@ import uml from "../assets/img/icon/uml.svg";
 import cpp from "../assets/img/icon/cpp.svg";
 import Qt from "../assets/img/icon/Qt.svg";
 import DynamicCard from "./DynamicCard";
+import CompactCardFixedRight from "./compactCard/compactCardFixedRight";
 
 const Pro = () => {
   const { t } = useTranslation();
@@ -30,7 +32,7 @@ const Pro = () => {
 
   const proItems = [
     {
-      major: true,
+      major: false,
       title: t("Chef de projet"),
       period: "2019",
       compagny: "MICHELIN",
@@ -55,7 +57,7 @@ const Pro = () => {
       ],
     },
     {
-      major: true,
+      major: false,
       title: t("Chargé d'enseignement vacataire"),
       period: "2018-2020",
       compagny: "ISIMA",
@@ -79,7 +81,7 @@ const Pro = () => {
       ],
     },
     {
-      major: true,
+      major: false,
       title: t("Solution consultant"),
       period: "2018-2019",
       compagny: "MICHELIN",
@@ -104,7 +106,7 @@ const Pro = () => {
       ],
     },
     {
-      major: true,
+      major: false,
       title: t("Développeur fullstack"),
       period: "2016 - 2018",
       compagny: "MICHELIN",
@@ -153,7 +155,7 @@ const Pro = () => {
       ],
     },
     {
-      major: true,
+      major: false,
       title: t("Chargé d'enseignement vacataire"),
       period: "2016",
       compagny: "UBP",
@@ -277,7 +279,7 @@ const Pro = () => {
       ],
     },
     {
-      major: true,
+      major: false,
       title: t("Emplois saisonniers"),
       compagny: "Divers",
       shortDescription: t("emploisSaisonniers"),
@@ -299,9 +301,14 @@ const Pro = () => {
 
   return (
     <Fragment>
-      {proItems.map((i) => {
-        return <DynamicCard exp={i} />;
-      })}
+      <CompactCardFixedRight
+        pic={pro}
+        center={true}
+        category="Expériences"
+        title="Pro."
+        list={proItems}
+        labelList="Expériences"
+      />
     </Fragment>
   );
 };

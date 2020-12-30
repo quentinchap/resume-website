@@ -1,13 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useTranslation } from "react-i18next";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import { defaultClasses } from "../theme";
 import DynamicCard from "./DynamicCard";
 
 const Education = () => {
   const { t } = useTranslation();
-  const classes = defaultClasses();
 
   const items = [
     {
@@ -40,11 +36,11 @@ const Education = () => {
   ];
 
   return (
-    <Card className={classes.section}>
+    <Fragment>
       {items.map((i) => (
         <DynamicCard exp={i} />
       ))}
-    </Card>
+    </Fragment>
   );
 };
 
